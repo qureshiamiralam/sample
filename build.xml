@@ -1,0 +1,26 @@
+...
+...
+	  <property name="build.native" value="./"/>
+  <property name="doxygen.cmd" value="/usr/bin/doxygen"/>
+
+  <target name="clean" description="clean up" >
+          <fileset dir="Docs/html" includes="**/*" />
+    </delete>
+  </target>
+
+  <target name="doxygen"
+         description="Process documentation" >
+    
+     <exec executable="${doxygen.cmd}"
+         dir="${build.native}"
+         failonerror="false">
+      <arg value="Doxygen.cfg"/>
+    </exec>
+  </target>
+
+...
+...
+
+
+
+    
